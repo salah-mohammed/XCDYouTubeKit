@@ -85,6 +85,9 @@ extern NSString *const XCDYouTubeVideoQualityHTTPLiveStreaming;
  *  The duration of the video in seconds.
  */
 @property (nonatomic, readonly) NSTimeInterval duration;
+
+@property (nonatomic, readonly) NSTimeInterval contentLength;
+
 /**
  *  The views count of the video.
  */

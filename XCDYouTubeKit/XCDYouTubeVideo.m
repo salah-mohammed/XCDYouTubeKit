@@ -217,6 +217,8 @@ static NSDate * ExpirationDate(NSURL *streamURL)
 		
 		_duration = info[@"length_seconds"] == nil? [(NSString *)videoDetails[@"lengthSeconds"] doubleValue] : [(NSString *)info[@"length_seconds"] doubleValue];
 		
+		_contentLength = info[@"contentLength"] == nil? [(NSString *)videoDetails[@"contentLength"] doubleValue] : [(NSString *)info[@"contentLength"] doubleValue];
+
 		NSString *thumbnail = info[@"thumbnail_url"] ?: info[@"iurl"];
 		NSURL *thumbnailURL = thumbnail ? [NSURL URLWithString:thumbnail] : nil;
 		_thumbnailURL = thumbnailURL;
